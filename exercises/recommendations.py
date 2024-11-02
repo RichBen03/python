@@ -33,7 +33,9 @@ def recommend_content(user_data):
         for category, words in keywords.items():
             if any(word in item for word in words):
                 interests[category] += 1
- recommendations = []
+    
+    # Recommendation rules based on identified interests
+    recommendations = []
     
     if interests["sports"] > 2:
         recommendations.append("Live sports updates and upcoming match schedules")
@@ -51,10 +53,12 @@ def recommend_content(user_data):
         recommendations.append("Sci-fi movie recommendations and tech documentaries")
     if len(recommendations) == 0:
         recommendations.append("Explore popular topics and trending news")
-        return recommendations
+
+    return recommendations
 
 # Run recommendation function
 recommendations = recommend_content(user_data)
 print("Recommended content based on your interests:")
 for recommendation in recommendations:
     print("- " + recommendation)
+add
