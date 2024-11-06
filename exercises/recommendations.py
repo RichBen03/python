@@ -61,4 +61,3 @@ recommendations = recommend_content(user_data)
 print("Recommended content based on your interests:")
 for recommendation in recommendations:
     print("- " + recommendation)
-add
