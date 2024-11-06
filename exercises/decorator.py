@@ -11,3 +11,12 @@ def timer_decorator(func):
         return result  # Return the result of the function
     return wrapper
 
+@timer_decorator
+def slow_function():
+    time.sleep(2)  # Simulate a slow operation with a 2-second delay
+    return "Finished slow function"
+
+@timer_decorator
+def quick_function():
+    sum([i for i in range(100)])  # Perform a quick operation
+    return "Finished quick function"
