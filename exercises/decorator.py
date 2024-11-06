@@ -1,9 +1,10 @@
-# creating a function that checks for time it wraps a function
-import time
+# creating a function that checks for time it wraps a function (decorator)
 
-def timer_decorator(func):
+import time #importing the time library
+
+def timer_decorator(func): # th
     def wrapper(*args, **kwargs):
-        start_time = time.time()  # Record the start time before calling the function
+        start_time = time.time()  # getting the current time in seconds and store it in start_time. This is the moment just before func is called.
         result = func(*args, **kwargs)  # Execute the function and store its result
         end_time = time.time()  # Record the end time after the function completes
         elapsed_time = end_time - start_time  # Calculate the elapsed time
