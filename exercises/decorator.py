@@ -10,3 +10,4 @@ def timer_decorator(func):
         print(f"Function '{func.__name__}' took {elapsed_time:.4f} seconds to execute.")
         return result  # Return the result of the function
     return wrapper
+
