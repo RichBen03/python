@@ -20,3 +20,7 @@ def slow_function():
 def quick_function():
     sum([i for i in range(100)])  # Perform a quick operation
     return "Finished quick function"
+@timer_decorator
+def compute_sum(n):
+    total = sum(range(n))  # Sum all numbers up to n
+    return total
