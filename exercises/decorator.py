@@ -24,3 +24,7 @@ def quick_function():
 def compute_sum(n):
     total = sum(range(n))  # Sum all numbers up to n
     return total
+
+print(slow_function())
+print(quick_function())
+print(compute_sum(1000000))
