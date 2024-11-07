@@ -5,3 +5,6 @@ def cached_factorial(n):
     if n in cache:
         print(f"Fetching from cache for n={n}")
         return cache[n]
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
