@@ -9,3 +9,5 @@ def cached_factorial(n):
     for i in range(1, n + 1):
         result *= i
         
+    cache[n] = result
+    print(f"Caching result for n={n}")
