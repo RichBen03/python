@@ -1,6 +1,8 @@
-cache = {}
+cache = {} # initializes an empty dictionary named cache, which will be used to store computed values of factorials
 
-def cached_factorial(n):
+def cached_factorial(n): #  defines the cached_factorial function, which calculates the factorial of a given number n 
+
+
     # Check if the result is already in the cache
     if n in cache:
         print(f"Fetching from cache for n={n}")
@@ -15,3 +17,4 @@ def cached_factorial(n):
     return result
 
 print(cached_factorial(5)) 
+print(cached_factorial(6))  
