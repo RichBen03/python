@@ -13,3 +13,5 @@ def cached_factorial(n):
     print(f"Caching result for n={n}")
 
     return result
+
+print(cached_factorial(5)) 
