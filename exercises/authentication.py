@@ -45,3 +45,27 @@ class AuthSystem:
         if self.privileges.get(role) != "all_access":
             raise InsufficientPrivileges("You do not have sufficient privileges to access this resource.")
         print("Access granted to the resource.")
+
+    def authenticate_user():
+     auth_system = AuthSystem()
+
+    # Loop for login attempts
+    while True:
+        try:
+            username = input("Enter username: ")
+            password = input("Enter password: ")
+            auth_system.login(username, password)
+            break  # Exit loop on successful login
+        except InvalidUsernameOrPassword as e:
+            print(e)
+        except AccountLocked as e:
+            print(e) 
+            exit # Exit function if account is locked
+            
+    try:
+        role = input("Enter your role (admin/user): ")
+        auth_system.access_resource(role)
+    except InsufficientPrivileges as e:
+        print(e)
+
+ 
