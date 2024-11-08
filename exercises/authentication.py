@@ -37,3 +37,11 @@ class AuthSystem:
                 self.locked = True
                 raise AccountLocked("Account is locked due to multiple failed login attempts.")
             raise InvalidUsernameOrPassword("Incorrect username or password. Please try again.")
+    
+    
+
+    def access_resource(self, role):
+        # Check the user's privilege level
+        if self.privileges.get(role) != "all_access":
+            raise InsufficientPrivileges("You do not have sufficient privileges to access this resource.")
+        print("Access granted to the resource.")
