@@ -44,4 +44,6 @@ calculator = ComplexCalculator()
 
 try:
     # Test with mixed data types
-    print("Addition:", calculator.add("10", 5.5))       
+    print("Addition:", calculator.add("10", 5.5))   
+    print("Subtraction:", calculator.subtract(10, "3"))   
+    print("Multiplication:", calculator.multiply("2", 3))  
