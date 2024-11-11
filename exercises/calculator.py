@@ -23,3 +23,8 @@ class ComplexCalculator:
         a = self._convert_to_number(a)
         b = self._convert_to_number(b)
         return a + b
+    
+    def subtract(self, a, b):
+        a = self._convert_to_number(a)
+        b = self._convert_to_number(b)
+        return a - b
