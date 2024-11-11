@@ -19,3 +19,7 @@ class ComplexCalculator:
             return float(value)
         except ValueError:
             raise InvalidInputError(f"Invalid input: '{value}' cannot be converted to a number.")
+    def add(self, a, b):
+        a = self._convert_to_number(a)
+        b = self._convert_to_number(b)
+        return a + b
