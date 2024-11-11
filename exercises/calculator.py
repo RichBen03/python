@@ -33,3 +33,15 @@ class ComplexCalculator:
         a = self._convert_to_number(a)
         b = self._convert_to_number(b)
         return a * b
+    def divide(self, a, b):
+        a = self._convert_to_number(a)
+        b = self._convert_to_number(b)
+        if b == 0:
+            raise ZeroDivisionError("Cannot divide by zero.")
+        return a / b
+    
+calculator = ComplexCalculator()
+
+try:
+    # Test with mixed data types
+    print("Addition:", calculator.add("10", 5.5))       
