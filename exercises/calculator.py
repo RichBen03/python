@@ -28,3 +28,8 @@ class ComplexCalculator:
         a = self._convert_to_number(a)
         b = self._convert_to_number(b)
         return a - b
+    
+    def multiply(self, a, b):
+        a = self._convert_to_number(a)
+        b = self._convert_to_number(b)
+        return a * b
