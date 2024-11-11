@@ -46,4 +46,6 @@ try:
     # Test with mixed data types
     print("Addition:", calculator.add("10", 5.5))   
     print("Subtraction:", calculator.subtract(10, "3"))   
-    print("Multiplication:", calculator.multiply("2", 3))  
+    print("Multiplication:", calculator.multiply("2", 3))
+    print("Division:", calculator.divide("10", "2.5"))  
+    print("Complex Addition:", calculator.add(3 + 4j, 5)) # (8+4j)
